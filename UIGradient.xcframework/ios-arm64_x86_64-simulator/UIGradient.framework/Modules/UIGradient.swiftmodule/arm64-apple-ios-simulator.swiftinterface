@@ -1,0 +1,118 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
+// swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UIGradient
+import MediaPlayer
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+public enum GradientDirection {
+  case topToBottom
+  case bottomToTop
+  case leftToRight
+  case rightToLeft
+  case topLeftToBottomRight
+  case topRightToBottomLeft
+  case bottomLeftToTopRight
+  case bottomRightToTopLeft
+  case custom(Swift.Int)
+}
+@objc open class GradientLayer : QuartzCore.CAGradientLayer {
+  public init(direction: UIGradient.GradientDirection, colors: [UIKit.UIColor], cornerRadius: CoreGraphics.CGFloat = 0, locations: [Swift.Double]? = nil)
+  @objc override dynamic public init(layer: Any)
+  @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  final public func clone() -> UIGradient.GradientLayer
+  @objc deinit
+}
+extension UIGradient.GradientLayer {
+  public static var oceanBlue: UIGradient.GradientLayer {
+    get
+  }
+  public static var sanguine: UIGradient.GradientLayer {
+    get
+  }
+  public static var lusciousLime: UIGradient.GradientLayer {
+    get
+  }
+  public static var purpleLake: UIGradient.GradientLayer {
+    get
+  }
+  public static var freshPapaya: UIGradient.GradientLayer {
+    get
+  }
+  public static var ultramarine: UIGradient.GradientLayer {
+    get
+  }
+  public static var pinkSugar: UIGradient.GradientLayer {
+    get
+  }
+  public static var lemonDrizzle: UIGradient.GradientLayer {
+    get
+  }
+  public static var victoriaPurple: UIGradient.GradientLayer {
+    get
+  }
+  public static var springGreens: UIGradient.GradientLayer {
+    get
+  }
+  public static var mysticMauve: UIGradient.GradientLayer {
+    get
+  }
+  public static var reflexSilver: UIGradient.GradientLayer {
+    get
+  }
+  public static var neonGlow: UIGradient.GradientLayer {
+    get
+  }
+  public static var berrySmoothie: UIGradient.GradientLayer {
+    get
+  }
+  public static var newLeaf: UIGradient.GradientLayer {
+    get
+  }
+  public static var cottonCandy: UIGradient.GradientLayer {
+    get
+  }
+  public static var pixieDust: UIGradient.GradientLayer {
+    get
+  }
+  public static var fizzyPeach: UIGradient.GradientLayer {
+    get
+  }
+  public static var sweetDream: UIGradient.GradientLayer {
+    get
+  }
+  public static var firebrick: UIGradient.GradientLayer {
+    get
+  }
+  public static var wroughtIron: UIGradient.GradientLayer {
+    get
+  }
+  public static var deepSea: UIGradient.GradientLayer {
+    get
+  }
+  public static var coastalBreeze: UIGradient.GradientLayer {
+    get
+  }
+  public static var eveningDelight: UIGradient.GradientLayer {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func addGradientWithDirection(_ direction: UIGradient.GradientDirection, colors: [UIKit.UIColor], cornerRadius: CoreGraphics.CGFloat = 0, locations: [Swift.Double]? = nil)
+  @_Concurrency.MainActor(unsafe) public func addGradient(_ gradientLayer: UIGradient.GradientLayer, cornerRadius: CoreGraphics.CGFloat = 0)
+}
+extension UIKit.UIColor {
+  public static func hex(_ hex: Swift.String, alpha: CoreGraphics.CGFloat = 1.0) -> UIKit.UIColor
+  public static func fromGradient(_ gradient: UIGradient.GradientLayer, frame: CoreGraphics.CGRect, cornerRadius: CoreGraphics.CGFloat = 0) -> UIKit.UIColor?
+  public static func fromGradientWithDirection(_ direction: UIGradient.GradientDirection, frame: CoreGraphics.CGRect, colors: [UIKit.UIColor], cornerRadius: CoreGraphics.CGFloat = 0, locations: [Swift.Double]? = nil) -> UIKit.UIColor?
+}
+extension UIKit.UIImage {
+  public static func fromGradient(_ gradient: UIGradient.GradientLayer, frame: CoreGraphics.CGRect, cornerRadius: CoreGraphics.CGFloat = 0) -> UIKit.UIImage?
+  public static func fromGradientWithDirection(_ direction: UIGradient.GradientDirection, frame: CoreGraphics.CGRect, colors: [UIKit.UIColor], cornerRadius: CoreGraphics.CGFloat = 0, locations: [Swift.Double]? = nil) -> UIKit.UIImage?
+}
+@_hasMissingDesignatedInitializers open class UIGradientHelper {
+  public static func getStartAndEndPointsOf(_ gradientDirection: UIGradient.GradientDirection) -> (startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
+  public static func startAndEndPoints(from angle: Swift.Int) -> (startPoint: CoreGraphics.CGPoint, endPoint: CoreGraphics.CGPoint)
+  @objc deinit
+}
